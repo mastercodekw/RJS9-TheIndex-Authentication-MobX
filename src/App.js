@@ -12,6 +12,8 @@ import BookList from "./BookList";
 // Store
 import authorStore from "./stores/AuthorStore";
 import bookStore from "./stores/BookStore";
+import Signup from "./forms/SignupForm";
+import Login from "./forms/LoginForm";
 
 function App() {
   const getView = () => {
@@ -23,6 +25,8 @@ function App() {
           <Redirect exact from="/" to="/authors" />
           <Route path="/authors/:authorID" component={AuthorDetail} />
           <Route path="/authors/" component={AuthorsList} />
+          <Route path="/signup/" component={Signup} />
+          <Route path="/login/" component={Login} />
           <Route path="/books/:bookColor?" component={BookList} />
         </Switch>
       );

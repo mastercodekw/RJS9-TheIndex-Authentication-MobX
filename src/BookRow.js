@@ -4,8 +4,8 @@ import { observer } from "../node_modules/mobx-react";
 
 const BookRow = props => {
   const book = props.book;
-  const authors = book.authors.map(author => (
-    <div key={author.name}>
+  const authors = book.authors.map((author, index) => (
+    <div key={index}>
       <Link to={`/authors/${author.id}`}>{author.name}</Link>
     </div>
   ));
